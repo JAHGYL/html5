@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- 不出分大小写 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5新增语义化标签</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+
+        header,footer{
+            height: 60px;
+            background-color: coral;
+            text-align: center;
+            line-height: 60px;
+        }
+        section{
+            height: calc(100% - 120px);
+            background-color: burlywood;
+        }
+
+        nav,aside{
+            height: 100%;
+            width: 200px;
+            float: left;
+        }
+        main{
+            height: 100%;
+            width: calc(100% - 400px);
+            background-color: bisque;
+            float: left;
+        }
+        figure{
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        main article{
+            calc(100% - 500px);
+            height: 260px;
+            border:3px solid white;
+        }
+        
+        .article-footer,.article-header{
+            height: 40px;
+            background-color:cornflowerblue;
+            text-align: center;
+            line-height: 40px;
+        }
+        .article-section{
+            height: 180px;
+            background-color:burlywood;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <section>
+        <nav>
+            <figure>nav</figure>
+            <ol>
+                <li>harughvadh</li>
+                <li>vbHSAJwblrf</li>
+                <li>afrh;sidhvasr</li>
+            </ul>
+        </nav>
+        <main>
+            <article class="article1">
+                <header class="article-header">article-header</header>
+                <section class="article-section">article-section</section>
+                <footer class="article-footer">article-footer</footer>
+            </article>
+            <article class="article2">
+                <header class="article-header">article-header</header>
+                <section class="article-section">article-section</section>
+                <footer class="article-footer">article-footer</footer>
+            </article>
+        </main>
+        <aside>
+            <figure>footer</figure>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ex laudantium dolores, rerum excepturi aperiam voluptate aliquam officiis dicta enim, placeat incidunt cupiditate a. Esse explicabo cupiditate laborum veniam officiis!</p>
+        </aside>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>
+
+<!-- 
+    语义化标签
+    增强型表单
+    canvas svg
+    音频视频
+    本地存储和离线缓存
+
+    header  
+    aside
+    footer
+    nav
+    figure
+    main
+    article
+    section
+ -->

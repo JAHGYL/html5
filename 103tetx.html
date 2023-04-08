@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键帧动画</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            animation: icream 2s 1s;
+        }
+/* 111 */
+        /* 动画申明 */
+        @keyframes icream{
+            from{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+            to{
+                width: 400px;
+                height: 400px;
+                background-color: lightblue;
+            }
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            animation: icream2 2s linear infinite;
+            /* infinite 无限循环 */
+        }
+/* 222 */
+        @keyframes icream2{
+            0%{
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+            }
+            25%{
+                width: 300px;
+                height: 300px;
+                background-color: greenyellow;
+            }
+            50%{
+                width: 400px;
+                height: 400px;
+                background-color: lightgreen ;
+            }
+            75%{
+                width: 500px;
+                height: 500px;
+                background-color: lawngreen ;
+            }
+            100%{
+                width: 600px;
+                height: 600px;
+                background-color: green ;
+            }
+        }
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            margin: 100px auto;
+            /* 单个属性 */
+            animation-name:icream3 ;
+            animation-duration:2s ;
+            animation-timing-function:linear ;
+            animation-delay:2s ;
+            animation-iteration-count:infinite;
+
+            animation-play-state: running;
+            /* running paused */
+
+            animation-direction: alternate-reverse;
+            /* 
+                normal  正常
+                reverse 反方向
+
+                alternate  正常方向-交替
+                alternate-reverse  反方向-交替
+
+            */
+        }
+        .box3:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes icream3{
+            from{
+                width: 200px;
+                height: 200px;
+                background-color: pink;
+            }
+            to{
+                width: 400px;
+                height: 400px;
+                background-color: lightblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- animation:动画名称 动画持续时间 动画过渡类型 动画延迟时间 动画循环次数 动画在循环过程中是否反向运动 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

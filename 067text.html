@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        div{
+            width: 400px;
+            height: 30px;
+            border: 1px solid black;
+        }
+        /* div的第一个孩子 */
+        div:first-child{
+            color: cyan;
+        }
+        /* div的最后一个孩子 */
+        div:last-child{
+            color: red;
+        }
+        /* div的第几个孩子 */
+        div:nth-child(3){
+            color: green;
+        }
+
+        /* 偶数个孩子 2n/even */
+        li:nth-child(2n){
+            background-color: aquamarine;
+        }
+        /* 奇数个孩子 2n+1/2n-1/odd */
+        li:nth-child(2n+1){
+            background-color: pink;
+        }
+
+        /* 选中空内容 */
+        div:empty{
+            background-color: orange;
+        }
+
+        /* 选中只有一孩子的 */
+        p:only-child{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">111111111111</div>
+        <div class="box2">111111111111</div>
+        <div class="box3">111111111111</div>
+        <div class="box4">111111111111</div>
+        <div class="box5">111111111111</div>
+    </div>
+<br><br><br><br><br><br>
+    <ul>
+        <li>aaaaaaa</li>
+        <li>bbbbbbb</li>
+        <li>ccccccc</li>
+        <li>ddddddd</li>
+        <li>fffffff</li>
+    </ul>
+
+    <!-- 非空，回车和空格都不为empty -->
+    <div>
+    </div>
+
+    <div></div>
+    
+    <ul>
+        <p>sfaf</p>
+        <p>afswea</p>
+    </ul>
+    <ul>
+        <p>cdsavdsd</p>
+    </ul>
+</body>
+</html>

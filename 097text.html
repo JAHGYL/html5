@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太极案例</title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        div{
+           width: 400px;
+           height: 400px;
+           background: linear-gradient(white 50%,black 50%);
+           margin: 100px auto;
+           display: flex;
+           align-items: center;
+           border-radius: 50%;
+            transition: all 2s;
+           transform: rotateX(10deg);
+           /* 
+            rotate 中心
+                负值 顺时针 
+                正值 逆时针
+            三维 旋转
+            rotateX 
+            rotateY
+            rotateZ
+
+           */
+        }
+
+        div::before{
+            content: "";
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: black;
+            background: -webkit-radial-gradient(white 25%, black 25%);
+
+        }
+        div::after{
+            content: "";
+            display: block;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: white;
+            background: -webkit-radial-gradient(black 25%,white 25%);
+        }
+
+        div:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

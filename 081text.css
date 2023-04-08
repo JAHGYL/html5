@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 955px;
+    height: 1350px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 955px;
+    height: 406px;
+    background-color: #242a3a;
+}
+footer{
+    width: 955px;
+    height: 135px;
+    background-color:#fafbfd;
+}
+section{
+    width: 955px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.first_header,.second_header{
+    height: 57px;
+    margin-top: 28px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.first_header .box1{
+    background-color: #242a3a ;
+    flex: 1;
+}
+.first_header .box2{
+    flex: 4;
+}
+.first_header img{
+    width: 60px;
+    height: 57px;
+}
+.first_header .box2 img{
+    width: 166px;
+}
+
+.second_header .box3{
+    background-color:#242a3a;
+    flex: 1;
+}
+
+.second_header .box3 img{
+    width: 114px;
+    height: 110px;
+}
+.second_header{
+    margin-left: 45px;
+    margin-top: 30px;
+    text-align: center;
+}
+.second_header p{
+    font-size: 36px;
+    color: white;
+}
+
+section .first_section{
+    width: 955px;
+    height: 648px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+section .first_section .section1{
+    width: 25%;
+    height: 215px;
+    border: 1px solid #ececec;
+    box-sizing: border-box;
+}
+
+section .first_section .section1 img{
+    width: 58px;
+    height: 50px;
+    margin: 50px;
+}
+section .first_section .section1 p{
+    font-size: 30px;
+}
+
+section .section2{
+    height: 280px;
+}
+section .section2 .empty{
+    width: 955px;
+    height: calc(100% - 250px);
+    background-color: #a7a8aa;
+}
+section .section2 img{
+    width: 955px;
+    height: 250px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+footer .footer1{
+    width: 100px;
+    height: 100px;
+    flex:1;
+    background-color: #fafbfd;
+    margin-top: 10px;
+}
+footer .footer1 img{
+    width: 58px;
+    height: 50px;
+}
+footer .footer1 p{
+    font-size: 26px;
+    color: #a7a8aa;
+}

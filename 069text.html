@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI状态伪类选择器</title>
+    <style>
+        input:enabled{
+            background-color: cornflowerblue;
+        }
+        input:disabled{
+            background-color: aquamarine;
+        }
+        input:focus{
+            background-color: palevioletred;
+        }
+
+        input[type=checkbox]{
+            /* 注销原有样式 */
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+        }
+
+        input:checked{
+            background-color: blueviolet;
+        }
+        
+        div::selection{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        姓名<input type="text"><br>
+        密码<input type="password"><br>
+        邮箱<input type="email" placeholder="此项不需要填写" disabled><br>
+        时间<input type="datetime-local"><br>
+        是否同意协议<input type="checkbox" class="checkbox"><br>
+        <input type="submit"><br>
+    </form>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cum quas earum exercitationem animi consequuntur minima pariatur. Ratione cum, deserunt accusantium, illo perferendis molestias quae, consequuntur praesentium aperiam provident facilis.</div>
+</body>
+</html>

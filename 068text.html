@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目标伪类选择器</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            position: fixed;
+            right: 0px;
+            bottom: 100px;
+        }
+        li{
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        .box{
+            height: 400px;
+            border: 1px solid palevioletred;
+        }
+
+        /* 
+            锚点座： 页面不同区域的跳转 ，使用a连接。
+           < a href="#锚点名字"></a>
+           < div id="锚点名字"></div>
+        */
+
+        /* 目标伪类选择器 */
+        .box:target{
+            background-color: cornflowerblue;
+        }
+        /* 手风琴 */
+        .content{
+            display: none;
+        }
+        .content:target{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#a">京东秒杀</a></li>
+        <li><a href="#b">京东秒0</a></li>
+        <li><a href="#c">京东秒9</a></li>
+        <li><a href="#d">京东秒7</a></li>
+    </ul>
+    <div id="a" class="box">京东秒杀</div>
+    <div id="b" class="box">京东秒0</div>
+    <div id="c" class="box">京东秒9</div>
+    <div id="d" class="box">京东秒7</div>
+
+    <div>
+        <a href="#111">111</a><br>
+        <div id="111" class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cupiditate rem voluptates illo voluptatibus assumenda reiciendis fugiat nemo consequatur id laborum illum maxime corporis voluptate neque est explicabo autem similique.</div>
+        <a href="#222">222</a><br>
+        <div id="222" class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cupiditate rem voluptates illo voluptatibus assumenda reiciendis fugiat nemo consequatur id laborum illum maxime corporis voluptate neque est explicabo autem similique.</div>
+        <a href="#333">333</a><br>
+        <div id="333" class="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, cupiditate rem voluptates illo voluptatibus assumenda reiciendis fugiat nemo consequatur id laborum illum maxime corporis voluptate neque est explicabo autem similique.</div>
+    </div>
+</body>
+</html>

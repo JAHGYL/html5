@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-平移</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+
+            transform-style: preserve-3d;
+            /* flat:2d舞台 */
+            /* preserve-3d: 3d舞台*/
+
+            position: relative;
+            margin: 0 auto;
+
+            perspective: 900px
+            /* 设置景深 */
+
+            /* perspective: 1200px;               在父元素中使用  */
+            /* transform: perspective(1200px)     在子元素中使用  */
+
+            /* perspective-origin: center center; 中心   */
+            /* perspective-origin: left top;      左下角 */
+            /* perspective-origin: 100% 100%;     右下角 */
+        }
+        .center{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+
+            transition: all 5s;
+
+        }
+
+        .box:hover .center{
+            /* transform: translateZ(-200px); */
+
+            transform: translate3d(0,0,200px);
+            /* translate3d()  translateZ() */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="center"></div>
+    </div>
+</body>
+</html>

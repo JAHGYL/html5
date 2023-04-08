@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-缩放</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            
+            display: flex;
+
+            transform-style:preserve-3d ;
+
+            perspective: 800px;
+        }
+        .center{
+            width: 200px;
+            height: 200px;
+            margin: 150px auto;
+            background-color: yellowgreen;
+
+            /* transform: scaleZ(5) rotateX(45deg); */
+            /* 
+                scaleZ()和scale3d()函数单独使用时没有任何效果，
+                需要配合其他的变形函数一起使用才会有效果 
+            */
+
+            transform: scale3d(1,1,10) rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="center"></div>
+    </div>
+</body>
+</html>

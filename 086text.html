@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多列布局</title>
+    <style>
+        div{
+            height: 300px;
+            background-color: aquamarine;
+
+            /* 控制显示的列数 */
+            column-count:5 ;
+
+            /* 调整列间距 */
+            column-gap: 100px;
+
+            /* 列边框 */
+            column-rule: 2px solid red;
+
+            /* 列统一高度  auto把父盒子沾满*/
+            column-fill: auto;
+
+            /* 调整列宽 */
+            /* column-width: 500px; */
+           
+        }
+         
+         div>h1{
+            /* 横跨所有的列 */
+            column-span: all;
+
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>发挥好将发生的变化</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta voluptates officiis eos mollitia! Nam atque labore voluptatum id voluptas, impedit deserunt totam eaque, recusandae doloribus ipsa sunt rem temporibus aut, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam consequuntur minus eligendi voluptas possimus, vero quod unde mollitia asperiores dignissimos reprehenderit iure, molestiae cum assumenda nam nulla eos labore veniam. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste cumque at, aliquid culpa nulla provident, rem laborum beatae praesentium ratione aliquam eum fuga a delectus vero hic. Harum, dolore? Quos?Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, totam perspiciatis laboriosam vero quos molestiae. Voluptatem qui officia, eaque non tempore est? Culpa dolorum explicabo suscipit incidunt accusantium, aspernatur dicta!Lorem</div>
+</body>
+</html>
+<!-- 
+    column-count
+    
+    column-gap
+    
+    column-rule
+
+    column-fill
+
+    column-width
+    
+    column-span: all;
+ -->

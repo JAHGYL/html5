@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逐帧动画案例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            animation: carton 5s ;
+            /*
+                steps( 直接进行关键帧 )
+                step-start   保留下一帧，看不到第一帧，从第一帧很快跳到下一帧
+                step-end     保留当前帧，看不到最后一帧，动画结束
+            */
+        }
+        @keyframes carton{
+            0%{
+                background-color: coral;
+            }
+            50%{
+                background-color: cornflowerblue;
+            }
+            100%{
+                background-color: crimson;
+            }
+        }
+
+        .box2{
+            width: 180px;
+            height: 300px;
+            margin-top: 50px;
+            background-image: url(charector.png);
+
+            animation: carton2 1s step-end infinite;
+        }
+        @keyframes carton2{
+            0%{
+                background-position: 0px 0;
+            }
+            14.3%{
+                background-position: -180px 0;
+            }
+            28.6%{
+                background-position: -360px 0;
+            }
+            42.9%{
+                background-position: 540px 0;
+            }
+            57.2%{
+                background-position: -720px 0;
+            }
+            71.5%{
+                background-position: -900px 0;
+            }
+            85.8%{
+                background-position: -1080px 0;
+            }
+            100%{
+                background-position: -1260px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

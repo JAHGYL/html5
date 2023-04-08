@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        div{
+            height: 100px;
+            background-color: brown;
+            box-sizing: border-box;
+            border:1px solid yellow;
+        }
+        @media screen and (min-width:1000px) {
+            body{
+                background-color: aquamarine;
+            }
+        }
+        @media screen and (max-width:1000px) and (min-width:800px) {
+            body{
+                background-color: pink;
+            }
+        }
+        @media screen and (max-width:800px) {
+            body{
+                background-color: palegoldenrod;
+            }
+        }
+
+        @media screen and (orientation:portrait){
+            div{
+                width: 50%;
+            }
+        }
+        @media screen and (orientation: landscape){
+            div{
+                width: 20%;
+            }
+        }
+        
+
+       
+    </style>
+</head>
+<body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+</body>
+</html>
+<!-- 
+    媒体查询
+    @media all and(min-width:320px){
+        body{backgroud-color:}
+    }
+
+    print
+    screen
+
+    / PC客户端或者大屏幕设备：1028px至更大 /
+    @media only screen and(min-width:1029px){}
+
+    / 竖屏 /
+    @media screen and(orientation:portrait)and(max-width:720px){}
+
+    / 横屏 /
+    @media screen and(orientation:landscape){}
+ -->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网格布局和间距</title>
+    <style>
+        /* 给什么标签加上display:grid 都可以变成块级网格*/
+        .box1
+        {
+            width: 600px;
+            height: 600px;
+            border: 5px solid black;
+            
+            display: grid;
+
+            /* 
+            grid-template-rows:200px 200px 200px ;
+            grid-template-columns:200px 200px 200px ; 
+            */
+
+            /* 
+            grid-template-rows:20% 30% 50% ;
+            grid-template-columns:50% 30% 20%; 
+            */
+
+            /* 
+            grid-template-rows:repeat(5,20%);
+            grid-template-columns:repeat(5,20%); 
+            */
+
+            /* 
+            grid-template-rows:repeat(auto-fill,20%);
+            grid-template-columns:repeat(auto-fill,20%);  
+            */
+            /* 自动均分填充 */
+
+            /* 
+            grid-template-rows:1fr 2fr 1fr ;
+            grid-template-columns:1fr 2fr 1fr ;   
+            */
+
+            /* 
+            grid-template-rows:minmax(100px,200px) 200px 100px;
+            grid-template-columns:200px 200px 200px;    
+            */
+            /* 最大最小 */
+
+            grid-template-rows:200px 100px auto;
+            grid-template-columns:200px 200px auto;
+
+            /* 间距 */
+            /* grid-row-gap:20px;
+            grid-column-gap:20px; */
+
+            /* grid-gap: 20px 20px; */
+
+            gap: 20px 30px;
+        }
+        .box1 div{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
+<!-- 触发网格布局：  dispaly:grid -->

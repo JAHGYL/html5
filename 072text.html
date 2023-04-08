@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            /* 圆角  px 或者 % 
+
+               v1,四个角一样 
+               v1,v2 左上右下 左下右上
+               v1,v2,v3 左上 左下右上 右下
+               v1,v2,v3,v4 顺时针
+
+               border-top-left-radius
+            */
+            border-radius: 10px;
+            border-top-left-radius: 50px;
+
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 0 auto;
+            border-radius: 30px/60px;
+                        /* 水平/垂直 */
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 0 auto;
+            border-radius: 100px;
+                        /*  50%  盒子的一半 */
+
+        }
+        .box4{
+            width: 500px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 0 auto;
+            border-radius: 40px;             
+
+        }
+        .box5{
+            /* 半圆 */
+            width: 400px;
+            height: 200px;
+            /* 长是宽的两倍 */
+            background-color: yellowgreen;
+            margin: 0 auto;
+            border-radius: 200px 200px 0 0;
+        }
+        .box6{
+            /* 扇形 */
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            margin: 0 auto;
+            border-radius: 200px 0 0 0;             
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div><br>
+    <div class="box2"></div><br>
+    <div class="box3"></div><br>
+    <div class="box4"></div><br>
+    <div class="box5"></div><br>
+    <div class="box6"></div>
+</body>
+</html>

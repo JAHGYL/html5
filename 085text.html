@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东分类页案例-竖向滚动 and 横向滚动</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        ul{
+            list-style: none;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        header{
+            height: 45px;
+            background-color: pink;
+            border: 1px solid gray;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+        }
+        header ul{
+            display: flex;
+            overflow: auto;
+        }
+        header ul li{
+            flex-shrink: 0;
+            /* 0 横向不挤压 */
+            line-height: 45px;
+            padding: 0 10px;
+        }
+        header ul li:hover{
+            background-color: white;
+            color: red;
+        }
+
+        section{
+            flex:1;
+            display: flex;
+            overflow: auto;
+            /* 溢出处理 */
+        }
+        section ul{
+            width: 85px;
+            overflow: auto;
+            /* \\\\\\\\\\\\ */
+        }
+        section ul li{
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #f8f8f8;
+            border: 1px solid gray;
+        }
+        section ul li:hover{
+            color: red;
+        }
+        section>div{
+            flex: 1;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+
+            justify-content: center;
+            align-items: center;
+            margin-top:10px ;
+
+            overflow: auto;
+        }
+        
+        section .content>div{
+            height:101px;
+            width: 33.33%;
+            text-align: center;
+        }
+        section .content>div img{
+            width: 60px;
+            height: 50px;
+            /* margin-top:11px ; */
+        }
+
+
+        footer{
+            height: 50px;
+            background-color: palevioletred;
+            border: 1px solid gray;
+            text-align: center;
+            color: white;
+            line-height: 50px;
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+            /* 使滚动条消失 */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+        </ul>
+    </header>
+    <section>
+        <ul>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+            <li>热门推荐</li>
+        </ul>
+        <div class="content">
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div><div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div><div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div><div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div><div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <span>电脑</span>
+            </div>
+        </div>
+    </section>
+    <footer>footer</footer>
+</body>
+</html>

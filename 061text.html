@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5新增 音频&视频 标签</title>
+    <style>
+        video{
+            width: 384px;
+            height: 216px;
+        }
+    </style>
+</head>
+<body>
+    <h1>music</h1>
+    <audio src="王源 - 只要有想见的人，就不是孤身一人.mp3" controls loop autoplay muted></audio>
+
+    <h1>video</h1>
+    <video src="治愈系.mp4" controls autoplay loop muted poster="catdog.jpg"></video>
+</body>
+</html>
+<!-- 
+    音频播放 audio
+                controls:控制栏
+
+                loop:      循环
+                autoplay:  打开页面自动播放
+                muted:     打开页面自动静音
+
+    视频播放 video
+                controls:  控制栏
+                poster：   加上一张海报用于显示
+                width  height
+
+                loop:      循环
+                autoplay:  打开页面自动播放  //autoplay刷新页面无效
+                muted:     打开页面自动静音  //加上muted后autoplay刷新页面依然有效
+ -->

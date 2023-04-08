@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本 & 盒子 阴影</title>
+    <style>
+        h1{
+            text-shadow: 10px 2px 3px green,0px -10px 1px red;
+            /* 水平方向位移  垂直方向位移 模糊程度  (可以设置多个 )*/
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: palevioletred;
+            /* 盒子阴影 */
+            box-shadow: 5px 5px 3px pink,-5px -5px 10px 150px plum;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-color: green;
+            box-shadow: 10px 10px 3px greenyellow inset;
+        }
+    </style>
+</head>
+<body>
+    <h1>大家好</h1>
+
+    <div class="box1"></div><br>
+    <div class="box2"></div>
+</body>
+</html>

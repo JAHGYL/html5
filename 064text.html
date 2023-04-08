@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增强表单-属性</title>
+</head>
+<body>
+    <!-- form 一定要注意，这是与后端传递数据的接口-->
+    <form action="">
+        <div>用户名: <input type="text" name="name" pattern="[a-z][0-9][A-Z]{3}" autofocus required></div>
+        <div>邮箱: <input type="email" name="email" required multiple></div>
+        <input type="submit">
+    </form >
+</body>
+</html>
+
+<!-- 
+    autofocus: 聚焦
+    required:  不能为空
+    multiple:  支持多个
+
+    <input pattern="[0-9][a-z]{4}" [0-9]第一个是数字，后面三个是小写字母，一共四个
+ -->

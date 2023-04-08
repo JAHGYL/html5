@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D属性</title>
+    <style>
+/* 平移 */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            transition: all 2s;
+            margin: 10px auto;
+        }
+        .box1:hover{
+            /* transform: translateX(100px); */
+            /* 沿X轴平移  可以为负值transform: translateX(-100px);*/
+
+            transform: translateX(100px) translateY(100px);
+            /* transform: translate(100px,100px) */
+        }
+
+        /* 设置left属性会频繁的造成浏览器回流重排，而transition和transform不会 */
+/* 缩放 */
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 4px solid white;
+            margin: 100px auto;
+            border-radius: 50%;
+
+            overflow: hidden;
+        }
+        .box2 img{
+            width: 100%;
+            transition: all 2s;
+
+            transform-origin: left top;
+            /*
+                改变中心的位置
+                center
+                left top
+                left bottom
+                ````````
+            */
+        }
+        .box2:hover img{
+            transform: scale(1.5);
+            /* 负值时 倒像的放大   支持x轴 y轴单独放大 scaleX scaleY*/
+        }
+/* 旋转  见 097text.html太极案例*/
+
+/* 折扇 */
+        ul{
+            list-style: none;
+        }
+        ul{
+            margin: 10px auto;
+            width: 600px;
+            height: 400px;
+            border: 5px solid gray;
+            position: relative;
+        }
+        li{
+            width: 60px;
+            height: 200px;
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            bottom: 30px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+
+            transform-origin:bottom center ;
+            /* 调整中心点 */
+
+            transition: all 2s;
+        }
+        ul li:not(:nth-child(7)){
+            opacity: 0;
+        }
+        ul:hover li{
+            opacity: 1;
+        }
+
+        ul li:nth-child(1),ul li:nth-child(13){
+            background-color: plum;
+        }
+        ul li:nth-child(2),ul li:nth-child(12){
+            background-color: pink;
+        }
+        ul li:nth-child(3),ul li:nth-child(11){
+            background-color: palevioletred  ;
+        }
+        ul li:nth-child(4),ul li:nth-child(10){
+            background-color:  deeppink;
+        }
+        ul li:nth-child(5),ul li:nth-child(9){
+            background-color: rgb(174, 49, 103);
+        }
+        ul li:nth-child(6),ul li:nth-child(8){
+            background-color: rgb(137, 28, 79);
+        }
+        ul li:nth-child(7){
+            background-color: purple;
+        }
+
+        ul:hover li:nth-child(1){
+            transform: rotate(90deg);
+        }
+        ul:hover li:nth-child(13){
+            transform: rotate(-90deg);
+        }
+        ul:hover li:nth-child(2){
+            transform: rotate(75deg);
+        }
+        ul:hover  li:nth-child(12){
+            transform: rotate(-75deg);
+        }
+        ul:hover  li:nth-child(3){
+            transform: rotate(60deg);
+        }
+        ul:hover li:nth-child(11){
+            transform: rotate(-60deg);
+        }
+        ul:hover  li:nth-child(4){
+            transform: rotate(45deg);
+        }
+        ul:hover  li:nth-child(10){
+            transform: rotate(-45deg);
+        }
+        ul:hover  li:nth-child(5){
+            transform: rotate(30deg);
+        }
+        ul:hover  li:nth-child(9){
+            transform: rotate(-30deg);
+        }
+        ul:hover  li:nth-child(6){
+            transform: rotate(15deg);
+        }
+        ul:hover  li:nth-child(8){
+            transform: rotate(-15deg);
+        }
+        ul:hover  li:nth-child(7){
+            transform: rotate(0deg);
+        }
+
+/* 多属性值 */
+        /* 
+            stransform:translateX(400px) scale(0.5) ;
+            两者产生效果不一样，缩放放后面
+            stransform:scale(0.5)  translateX(400px);
+
+        */
+/* 倾斜 */
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+
+            margin: 10px auto;
+            line-height: 200px;
+            border: 1px solid black;
+            font-size: 50px;
+            text-align: center;
+
+            transform: skewX(-30deg);
+            /*  skewX正值 ，拽右下角，往右拉动，形成30deg   skewY */
+            /*  skew(x,y)正值 ，拽右下角，往右下拉动，形成30deg */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">
+        <img src="pic.png" alt="">
+    </div>
+    <div class="box3">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+        </ul>
+    </div>
+    <div class="box4">hfajhui</div>
+</body>
+</html>

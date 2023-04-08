@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <title>足球圈移动端布局案例</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+
+        header{
+            height: 44px;
+            background-color: #0cc440;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        header div{
+            width: 60px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            font-size: 12px;
+        }
+        header .div1{
+            background-color: #63d985;
+            color: white;
+            border-radius: 12px 0 0 12px;
+        }
+        header .div2{
+            background-color: #3dd066;
+            color: #95eba0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        section{
+            flex: 1;
+            overflow: auto;
+            /* 溢出处理 */
+        }
+        section ul{
+            height: 30px;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            border: 1px solid #d9d9d9;
+            font-size: 15px;
+            line-height: 30px;
+
+            background-color: white;
+            position: sticky;
+            top: 0;
+            /* 黏性盒子 */
+        }
+        section ul li{
+            flex: 1;
+            color: #656565;
+        }
+
+        section ul li:first-child{
+            color: #4cd666;
+            border-bottom: 3px solid #0ec340;
+        }
+
+        section .picture_box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+        section .picture_box div{
+            width: 49%;
+            margin-top: 4px;
+            border: 1px solid #d9d9d9;
+        }
+        section .picture_box div img{
+            width: 100%;
+        }
+        section .picture_box div p{
+            height: 30px;
+            line-height: 30px;
+            font-size: 13px;
+            text-indent: 10px;
+        }
+
+
+        footer{
+            height: 44px;
+            background-color:white;
+            border: 1px solid #d9d9d9;
+        }
+        footer ul{
+            display: flex;
+            height: 100%;
+        }
+        footer li{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: #d9d9d9;
+        }
+        footer li i{
+            height: 21px;
+            font-size: 16px;
+            line-height: 21px;
+            text-align: center;
+        }
+        footer li span{
+            height: 17px;
+            line-height: 17px;
+            font-size: 16px;
+            text-align: center;
+        }
+        footer li:nth-child(3){
+            position: relative;
+        }
+        footer li:nth-child(3) i{
+            width: 50px;
+            height: 50px;
+            border: 3px solid #d9d9d9;
+            border-radius: 50%;
+
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            top:-9px;
+
+            font-size: 30px;
+            color: #d9d9d9;
+            text-align: center;
+            line-height: 50px;
+            background-color: white;
+        }
+        footer li:hover{
+            color: #0cc440;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="div1">热点</div>
+        <div class="div2">关注</div>
+    </header>
+    <section>
+        <ul>
+            <li>足球现场</li>
+            <li>足球生活</li>
+            <li>足球美女</li>
+        </ul>
+        <div class="picture_box">
+            <div>
+                <img src="pic.png" alt="">
+                <p>小丸子啊小丸子！</p>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <p>小丸子啊小丸子！</p>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <p>小丸子啊小丸子！</p>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <p>小丸子啊小丸子！</p>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <p>小丸子啊小丸子！</p>
+            </div>
+            <div>
+                <img src="pic.png" alt="">
+                <p>小丸子啊小丸子！</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li>
+                <i class="iconfont icon-shouye"></i>
+                <span>首页</span>
+            </li>
+            <li>
+                <i class="iconfont icon-fangdajing"></i>
+                <span>发现</span>
+            </li>
+            <li>
+                <i class="iconfont icon-Instagram"></i>
+                <span></span>
+            </li>
+            <li>
+                <i class="iconfont icon-wode"></i>
+                <span>我的</span>
+            </li>
+            <li>
+                <i class="iconfont icon-tuichu"></i>
+                <span>退出</span>
+            </li>
+        </ul>
+        
+    </footer>
+</body>
+</html>

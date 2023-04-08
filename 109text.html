@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d-旋转</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            
+            display: flex;
+
+            transform-style:preserve-3d ;
+        }
+        .box .center{
+            width: 200px;
+            height: 200px;
+            margin: 150px auto;
+            background-color: coral;
+
+            /* transform: rotateX(30deg); */
+            /* transform: rotateY(30deg); */
+            /* transform: rotateZ(30deg);  */
+
+            transform: rotate3d(0,0,1,45deg);
+            /* 前三个值为0-1 */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="center"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒</title>
+    <style>
+        .box1,.box4{
+            width: 400px;
+            height: 300px;
+            margin: center;
+            border: 2px solid black;
+            display: flex;
+            /*  弹性盒*/
+            flex-direction:row-reverse;
+            /* 修改主轴方向 */
+            /*
+                row:     水平排列且自动压缩
+                column:  竖直排列且自动压缩
+                row-reverse:    反向 水平排列且自动压缩
+                column-reverse: 反向 竖直排列且自动压缩
+             */
+        }
+
+        .box1>div{
+            width: 80px;
+            height: 100px;
+            border: 2px dashed red;
+        }
+
+        .box2{
+            width: 400px;
+            height: 300px;
+            margin: center;
+            border: 2px solid black;
+            display: flex;
+
+            justify-content: space-around;
+            /* 
+                调整主轴对齐
+                flex-start
+                flex-end
+                center
+
+                space-between 两端对齐
+                space-around  距离环绕
+
+            */
+            align-items: center;
+            /* 
+                调整侧轴对齐
+                flex-start
+                flex-end
+                center
+            */
+        }
+        .box2>.span1{
+            width: 80px;
+            height: 100px;
+            border: 2px dashed red;
+        }
+        .box3{
+            width: 400px;
+            height: 300px;
+            margin: center;
+            border: 2px solid black;
+        }
+        .box3>span{
+            width: 80px;
+            height: 100px;
+            border: 2px dashed red;
+        }
+
+        .box4>div{
+            width: 80px;
+            height: 100px;
+            border: 2px dashed red;
+            margin: auto;
+        }
+
+        .box5{
+            width: 400px;
+            height: 500px;
+            margin: 100px auto;
+            border: 2px solid black;
+            display: flex;
+
+            flex-wrap: wrap;
+            /* 折行 */
+            align-content: center;
+            /* 
+                控制折行后行间距
+
+                flex-start
+                flex-end
+                center
+                space-around
+                spacce-between
+                */
+        }
+        .box5>div{
+            width: 80px;
+            height: 100px;
+            border: 2px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        弹性和，非常适合移动端布局
+
+        display：flex;
+        1、默认横向排列
+        2、行内元素变成块级元素
+        3、只有一个元素时，margin:auto; 自动居中
+    -->
+    <div class="box1">
+        <div>1111111</div>
+        <div>1111111</div>
+        <div>1111111</div>
+        <div>1111111</div>
+    </div>
+    <br>
+
+    <div class="box2">
+        <span class="span1">2222222</span>
+        <span class="span1">2222222</span>
+        <span class="span1">2222222</span>
+    </div>
+    <div class="box3">
+        <span>33333333</span>
+        <span>33333333</span>
+        <span>33333333</span>
+    </div>
+    <br>
+
+    <div class="box4">
+        <div>44444444</div>
+    </div>
+    <br>
+
+    <div class="box5">
+        <div>1111111</div>
+        <div>1111111</div>
+        <div>1111111</div>
+        <div>1111111</div>
+        <div>1111111</div>
+        <div>1111111</div>
+    </div>
+</body>
+</html>

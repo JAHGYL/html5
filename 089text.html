@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局案例</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        .box1{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .box1 .left{
+            width: 49%;
+        }
+        .box1 img{
+            width: 100%;
+        }
+        .box1 .right{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box1 .right>div{
+            width: 49%;
+        }
+
+        @media screen and (max-width:768px) {
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="left">
+            <img src="swiper1.jpeg" alt="">
+        </div>
+        <div class="right">
+            <div>
+                <img src="ad1.png" alt="">
+            </div>
+            <div>
+                <img src="ad1.png" alt="">
+            </div>        
+        </div>
+    </div>
+    <div class="bottom">
+        <img src="img1.jpg" alt="">
+    </div>
+</body>
+</html>

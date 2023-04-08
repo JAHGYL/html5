@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vh & vw</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100vw;
+            height: 100vh;
+            /* 实现等比缩放布局 */
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <!-- 
+        vh :view-height 视口高度
+
+        vw :view-width  视口宽度
+
+        没有滚动条时 100vw === 100%
+
+        有滚动条 
+                100vw 包含滚动条，窗户口大小
+                100%  不包含    ，剩余空间占满
+     -->
+</body>
+</html>

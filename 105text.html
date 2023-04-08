@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮拨图案例/css3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-contianer{
+            width: 640px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .swiper-wrapper{
+            width: 9999px;
+            animation: run 10s linear infinite;
+        }
+        .swiper-contianer img{
+            width: 640px;
+            height: 300px;
+        }
+        .swiper-slide{
+            float: left;
+        }
+        .swiper-wrapper:hover{
+            animation-play-state: paused;
+        }
+        @keyframes run{
+            0%{
+                transform: translateX(0);
+            }
+            5%{
+                transform: translateX(-640px);
+            }
+            25%{
+                transform: translateX(-640px);
+            }
+            30%{
+                transform: translateX(-1280px);
+            }
+            50%{
+                transform: translateX(-1280px);
+            }
+            55%{
+                transform: translateX(-1920px);
+            }
+            75%{
+                transform: translateX(-1920px);
+            }
+            80%{
+                transform: translateX(-2560px);
+            }
+            100%{
+                transform: translateX(-2560px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-contianer">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="pic.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="catdog.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="a.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="img1.jpg" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="pic.png" alt="">
+            </div>
+            <!-- 无缝轮播，加上和第一个一样的 -->
+        </div>
+    </div>
+</body>
+</html>

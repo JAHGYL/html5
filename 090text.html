@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em  & rem</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 30px;
+        }
+        div{
+            height: 200px;
+            border: 1px solid red;
+        }
+        .box1 p{
+            font-size: 2rem;
+        }
+        .box2 p{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        px:50px
+        em:相对单位，相对于父元素的字体大小。 div width:10em;
+        rem:相对单位，先后对于根元素（html）的字体大小。 div width:10rem;     
+    -->
+
+    <div class="box1">
+        <p>赵钱孙李</p>
+    </div>
+    <div class="box2">
+        <p>赵钱孙李</p>
+    </div>
+    
+</body>
+</html>
